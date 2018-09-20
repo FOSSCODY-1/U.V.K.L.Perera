@@ -127,6 +127,11 @@ public class interface_cal extends javax.swing.JFrame {
         });
 
         jbMUL.setText("*");
+        jbMUL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMULActionPerformed(evt);
+            }
+        });
 
         jb3.setText("3");
         jb3.addActionListener(new java.awt.event.ActionListener() {
@@ -387,7 +392,8 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbDIV, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbLOG, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -415,10 +421,6 @@ public class interface_cal extends javax.swing.JFrame {
                             .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(79, 79, 79))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE))
         );
 
         pack();
@@ -435,19 +437,15 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb8ActionPerformed
 
     private void jbDIVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDIVActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbDIVActionPerformed
 
     private void jbEQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEQLActionPerformed
-        // TODO add your handling code here:
         
-      number2 = Integer.parseInt(tfDisplay.getText());
-      int number3 = number1 + number2;
-      tfDisplay.setText(String.valueOf(number3));
     }//GEN-LAST:event_jbEQLActionPerformed
 
     private void jbSUBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSUBActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbSUBActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -471,12 +469,15 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCOSActionPerformed
 
     private void jbSINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSINActionPerformed
-        // TODO add your handling code here:
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num=Math.toRadians(num);
+        num = Math.sin(num);
+        tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbSINActionPerformed
 
     private void jbLOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLOGActionPerformed
         double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
-        num = Math.log(num);
+//        num = Math.(num);
         tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbLOGActionPerformed
 
@@ -494,13 +495,10 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbANSActionPerformed
 
     
-    int number1;
-    int number2;
+   
     
     private void jbADDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbADDActionPerformed
-        // TODO add your handling code here:
-        number1 = Integer.parseInt(tfDisplay.getText());
-        tfDisplay.setText("");
+        
     }//GEN-LAST:event_jbADDActionPerformed
 
     private void jbSQRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSQRActionPerformed
@@ -548,7 +546,7 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCLEARActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb0ActionPerformed
@@ -567,6 +565,10 @@ public class interface_cal extends javax.swing.JFrame {
         num=(-1)*num;
         tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbPLUSMINUSActionPerformed
+
+    private void jbMULActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMULActionPerformed
+        
+    }//GEN-LAST:event_jbMULActionPerformed
 
     /**
      * @param args the command line arguments
