@@ -465,7 +465,10 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbTANActionPerformed
 
     private void jbCOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCOSActionPerformed
-        // TODO add your handling code here:
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num=Math.toRadians(num);
+        num = Math.cos(num);
+        tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbCOSActionPerformed
 
     private void jbSINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSINActionPerformed
@@ -477,7 +480,7 @@ public class interface_cal extends javax.swing.JFrame {
 
     private void jbLOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLOGActionPerformed
         double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
-//        num = Math.(num);
+        num = Math.log(num);
         tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbLOGActionPerformed
 
