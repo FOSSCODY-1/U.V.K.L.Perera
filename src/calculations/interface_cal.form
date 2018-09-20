@@ -106,7 +106,6 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jbLOG" min="-2" pref="52" max="-2" attributes="0"/>
                           <Component id="jButton21" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="jButton24" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
                           <Component id="jbBACKS" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -114,18 +113,30 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                      <Component id="jButton26" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="jbCLEAR" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jbSQR" min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jbSQR" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jbSIN" min="-2" pref="52" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jbCOS" min="-2" pref="52" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jbTAN" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jbCOSEC" max="32767" attributes="0"/>
+                          <Component id="jbSIN" pref="52" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jbCOS" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jbTAN" min="-2" pref="52" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jbSEC" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jbCOT" min="-2" pref="52" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <Component id="jbCLEAR" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="35" max="32767" attributes="0"/>
           </Group>
@@ -145,6 +156,7 @@
                   <Component id="jButton20" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jbBACKS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jbCLEAR" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbSQR" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -166,33 +178,23 @@
                   <Component id="jbADD" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jbSUB" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton21" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jbSQR" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbCOSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbCOT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jbANS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="jbEQL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jb0" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="jbPLUSMINUS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="jbpoint" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbANS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="jbEQL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="10" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton24" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jButton26" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="jb0" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="jbPLUSMINUS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="jbpoint" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -421,13 +423,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSQRActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton24">
+    <Component class="javax.swing.JButton" name="jbCOSEC">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="text" type="java.lang.String" value="cosec"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton24ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCOSECActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jbCLEAR">
@@ -439,13 +441,22 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCLEARActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton26">
+    <Component class="javax.swing.JButton" name="jbCOT">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x2190;"/>
+        <Property name="text" type="java.lang.String" value="cot"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton26ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCOTActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbSEC">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="sec"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSECActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

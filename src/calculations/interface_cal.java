@@ -59,9 +59,10 @@ public class interface_cal extends javax.swing.JFrame {
         jbSIN = new javax.swing.JButton();
         jbLOG = new javax.swing.JButton();
         jbSQR = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
+        jbCOSEC = new javax.swing.JButton();
         jbCLEAR = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
+        jbCOT = new javax.swing.JButton();
+        jbSEC = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -261,11 +262,11 @@ public class interface_cal extends javax.swing.JFrame {
             }
         });
 
-        jButton24.setText("√");
-        jButton24.setToolTipText("");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
+        jbCOSEC.setText("cosec");
+        jbCOSEC.setToolTipText("");
+        jbCOSEC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
+                jbCOSECActionPerformed(evt);
             }
         });
 
@@ -277,11 +278,19 @@ public class interface_cal extends javax.swing.JFrame {
             }
         });
 
-        jButton26.setText("←");
-        jButton26.setToolTipText("");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        jbCOT.setText("cot");
+        jbCOT.setToolTipText("");
+        jbCOT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                jbCOTActionPerformed(evt);
+            }
+        });
+
+        jbSEC.setText("sec");
+        jbSEC.setToolTipText("");
+        jbSEC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSECActionPerformed(evt);
             }
         });
 
@@ -352,21 +361,28 @@ public class interface_cal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jbLOG, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbBACKS, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jbSQR, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbCLEAR, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbSQR, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jbSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jbCLEAR, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jbCOSEC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbSIN, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jbSEC, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbCOT, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -382,7 +398,8 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jb9, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBACKS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCLEAR, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbCLEAR, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSQR, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -402,25 +419,19 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbADD, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSUB, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbSQR, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbCOSEC, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCOT, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSEC, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jbANS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jbEQL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jbPLUSMINUS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jbpoint, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(79, 79, 79))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbANS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbEQL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbPLUSMINUS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbpoint, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
@@ -461,7 +472,10 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbBACKSActionPerformed
 
     private void jbTANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTANActionPerformed
-        // TODO add your handling code here:
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num=Math.toRadians(num);
+        num = Math.tan(num);
+        tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbTANActionPerformed
 
     private void jbCOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCOSActionPerformed
@@ -540,17 +554,25 @@ public class interface_cal extends javax.swing.JFrame {
         tfDisplay.setText(n);
     }//GEN-LAST:event_jb3ActionPerformed
 
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24ActionPerformed
+    private void jbCOSECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCOSECActionPerformed
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num = Math.toRadians(num);
+        num = Math.sin(num);
+        num=1/num;
+        tfDisplay.setText(String.valueOf(num));
+    }//GEN-LAST:event_jbCOSECActionPerformed
 
     private void jbCLEARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCLEARActionPerformed
       tfDisplay.setText("");
     }//GEN-LAST:event_jbCLEARActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-       
-    }//GEN-LAST:event_jButton26ActionPerformed
+    private void jbCOTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCOTActionPerformed
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num = Math.toRadians(num);
+        num = Math.tan(num);
+        num=1/num;
+        tfDisplay.setText(String.valueOf(num));
+    }//GEN-LAST:event_jbCOTActionPerformed
 
     private void jb0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb0ActionPerformed
         String n = tfDisplay.getText() + jb0.getText();
@@ -572,6 +594,14 @@ public class interface_cal extends javax.swing.JFrame {
     private void jbMULActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMULActionPerformed
         
     }//GEN-LAST:event_jbMULActionPerformed
+
+    private void jbSECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSECActionPerformed
+         double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num=Math.toRadians(num);
+        num = Math.cos(num);
+        num=1/num;
+        tfDisplay.setText(String.valueOf(num));
+    }//GEN-LAST:event_jbSECActionPerformed
 
     /**
      * @param args the command line arguments
@@ -611,8 +641,6 @@ public class interface_cal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton26;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -631,12 +659,15 @@ public class interface_cal extends javax.swing.JFrame {
     private javax.swing.JButton jbBACKS;
     private javax.swing.JButton jbCLEAR;
     private javax.swing.JButton jbCOS;
+    private javax.swing.JButton jbCOSEC;
+    private javax.swing.JButton jbCOT;
     private javax.swing.JButton jbDEL;
     private javax.swing.JButton jbDIV;
     private javax.swing.JButton jbEQL;
     private javax.swing.JButton jbLOG;
     private javax.swing.JButton jbMUL;
     private javax.swing.JButton jbPLUSMINUS;
+    private javax.swing.JButton jbSEC;
     private javax.swing.JButton jbSIN;
     private javax.swing.JButton jbSQR;
     private javax.swing.JButton jbSUB;
