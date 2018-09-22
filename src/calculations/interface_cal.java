@@ -68,6 +68,7 @@ public class interface_cal extends javax.swing.JFrame {
         jbROUND = new javax.swing.JButton();
         jbPOW2 = new javax.swing.JButton();
         jbPOW3 = new javax.swing.JButton();
+        jbCBRT = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -332,6 +333,14 @@ public class interface_cal extends javax.swing.JFrame {
             }
         });
 
+        jbCBRT.setText("cbrt");
+        jbCBRT.setToolTipText("");
+        jbCBRT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCBRTActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -427,7 +436,8 @@ public class interface_cal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jbCOT, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addComponent(jbCBRT, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbPI, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(285, Short.MAX_VALUE))
         );
@@ -473,8 +483,9 @@ public class interface_cal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbPOW2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbPI, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74)
+                    .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCBRT, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(148, 148, 148)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -486,8 +497,8 @@ public class interface_cal extends javax.swing.JFrame {
                             .addComponent(jbPLUSMINUS, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbpoint, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 53, Short.MAX_VALUE)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                        .addGap(0, 16, Short.MAX_VALUE)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -691,6 +702,12 @@ public class interface_cal extends javax.swing.JFrame {
         tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbPOW3ActionPerformed
 
+    private void jbCBRTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCBRTActionPerformed
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num = Math.cbrt(num);
+        tfDisplay.setText(String.valueOf(num));
+    }//GEN-LAST:event_jbCBRTActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -745,6 +762,7 @@ public class interface_cal extends javax.swing.JFrame {
     private javax.swing.JButton jbADD;
     private javax.swing.JButton jbANS;
     private javax.swing.JButton jbBACKS;
+    private javax.swing.JButton jbCBRT;
     private javax.swing.JButton jbCLEAR;
     private javax.swing.JButton jbCOS;
     private javax.swing.JButton jbCOSEC;
