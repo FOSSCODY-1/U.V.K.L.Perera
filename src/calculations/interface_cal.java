@@ -686,7 +686,9 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbPOW2ActionPerformed
 
     private void jbPOW3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPOW3ActionPerformed
-        // TODO add your handling code here:
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num = Math.pow(num, 3);
+        tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbPOW3ActionPerformed
 
     /**
