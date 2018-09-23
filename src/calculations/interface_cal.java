@@ -71,6 +71,7 @@ public class interface_cal extends javax.swing.JFrame {
         jbCBRT = new javax.swing.JButton();
         jbBINARY = new javax.swing.JButton();
         jbHEXADECIMAL = new javax.swing.JButton();
+        jbOCT = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -357,6 +358,13 @@ public class interface_cal extends javax.swing.JFrame {
             }
         });
 
+        jbOCT.setText("oct");
+        jbOCT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbOCTActionPerformed(evt);
+            }
+        });
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -452,7 +460,10 @@ public class interface_cal extends javax.swing.JFrame {
                                         .addComponent(jbCBRT, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jbPI, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(tfDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -515,7 +526,8 @@ public class interface_cal extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbBINARY, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 265, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -761,6 +773,11 @@ public class interface_cal extends javax.swing.JFrame {
         tfDisplay.setText(Integer.toString(num, 16));
     }//GEN-LAST:event_jbHEXADECIMALActionPerformed
 
+    private void jbOCTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbOCTActionPerformed
+        int num = Integer.parseInt(tfDisplay.getText());
+        tfDisplay.setText(Integer.toString(num, 8));
+    }//GEN-LAST:event_jbOCTActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -827,6 +844,7 @@ public class interface_cal extends javax.swing.JFrame {
     private javax.swing.JButton jbHEXADECIMAL;
     private javax.swing.JButton jbLOG;
     private javax.swing.JButton jbMUL;
+    private javax.swing.JButton jbOCT;
     private javax.swing.JButton jbPI;
     private javax.swing.JButton jbPLUSMINUS;
     private javax.swing.JButton jbPOW;
