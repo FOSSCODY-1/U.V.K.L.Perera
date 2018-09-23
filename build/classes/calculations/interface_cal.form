@@ -93,65 +93,76 @@
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jbBINARY" min="-2" pref="52" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbHEXADECIMAL" min="-2" pref="52" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbOCT" min="-2" pref="52" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jbSIN" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                              <Component id="jbTAN" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbLOG" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jbCOSEC" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                              <Component id="jbCOT" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbPI" min="-2" pref="52" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jbPOW" min="-2" pref="52" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                               <Component id="jbPOW3" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbCBRT" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jbCOS" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jbBACKS" min="-2" pref="52" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbCLEAR" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jbBINARY" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jbHEXADECIMAL" min="-2" pref="52" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jbOCT" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Component id="jbSEC" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="jbPOW2" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jbCBRT" min="-2" pref="52" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbSQR" min="-2" pref="52" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jbROUND" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jbSIN" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="jbTAN" min="-2" pref="52" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jbLOG" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jbCOS" min="-2" pref="52" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jbBACKS" min="-2" pref="52" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jbCLEAR" min="-2" pref="52" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jbSEC" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
+                                              <Component id="jbPOW2" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jbSQR" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jbCOSEC" min="-2" pref="52" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                          <Component id="jbCOT" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                          <Component id="jbROUND" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jbPI" min="-2" pref="52" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   </Group>
                   <Component id="tfDisplay" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -170,71 +181,62 @@
                   <Component id="jbBACKS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jbCLEAR" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jbSQR" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jbROUND" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbROUND" alignment="1" min="-2" pref="53" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jb5" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jb6" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbMUL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbDIV" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbSIN" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbCOS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbTAN" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jb4" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbLOG" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jb5" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jb6" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbMUL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbDIV" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbSIN" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbCOS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbTAN" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jb4" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbLOG" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbADD" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbSUB" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbCOSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbCOT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jbPI" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jbADD" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jbSUB" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jbCOSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jbCOT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jbSEC" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jb1" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jb2" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                                  <Component id="jb3" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbEQL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbANS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbpoint" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbPLUSMINUS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jb0" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbPOW" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbPOW2" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbPOW3" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jbBINARY" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbHEXADECIMAL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jbOCT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="223" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                      <Component id="jbPI" min="-2" pref="53" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbCBRT" min="-2" pref="53" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jb1" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jb2" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="jb3" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jbEQL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbANS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbpoint" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbPLUSMINUS" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jb0" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbPOW" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbPOW2" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbPOW3" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jbBINARY" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbHEXADECIMAL" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbOCT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                  <Component id="jbCBRT" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="223" max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="60" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
