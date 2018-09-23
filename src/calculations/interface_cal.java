@@ -5,6 +5,8 @@
  */
 package calculations;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author kasuni
@@ -84,6 +86,11 @@ public class interface_cal extends javax.swing.JFrame {
         tfDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfDisplayActionPerformed(evt);
+            }
+        });
+        tfDisplay.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfDisplayKeyTyped(evt);
             }
         });
 
@@ -777,6 +784,14 @@ public class interface_cal extends javax.swing.JFrame {
         int num = Integer.parseInt(tfDisplay.getText());
         tfDisplay.setText(Integer.toString(num, 8));
     }//GEN-LAST:event_jbOCTActionPerformed
+
+    private void tfDisplayKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfDisplayKeyTyped
+        char ch=evt.getKeyChar();
+        if(!(Character.isDigit(ch)|| (ch==KeyEvent.VK_BACK_SPACE) || (ch== KeyEvent.VK_DELETE))){
+            getToolkit().beep;
+            evt.consume();
+        }
+    }//GEN-LAST:event_tfDisplayKeyTyped
 
     /**
      * @param args the command line arguments
