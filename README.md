@@ -1,10 +1,10 @@
-# ** scientific Calculator **
+# ** SCIENTIFIC CALCULATOR **
 
-## ** about this **
+## ** About this **
 * this is a scientific calculator
 * This is a type of an electronic calculator in which different calculating methods are involved.
 
-## ** how to use this ** 
+## ** How to use this ** 
 * user can easyly understand when see the window of this
 * it has a file button and you can selecct your choice whether you want scientific calculator or normal calculator.
 * you can use the key bord when use short cut keys.
@@ -15,7 +15,7 @@ if you want develop this then you can use thext editors:
 * netbeans
 * notepad or etc.
 
-## ** to setup **
+## ** To setup **
 * Download  [this](https://github.com/FOSSCODY-1/U.V.K.L.Perera)
 
 
@@ -32,6 +32,10 @@ if you want develop this then you can use thext editors:
 
 ## ** License **
 * This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## ** Bugs **
+*this has some bugs and i hope correct those bugs.
+
 
 
 
