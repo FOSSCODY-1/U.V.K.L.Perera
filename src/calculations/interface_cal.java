@@ -6,7 +6,9 @@
 package calculations;
 
 import java.awt.event.KeyEvent;
-
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 /**
  *
  * @author kasuni
@@ -21,6 +23,7 @@ public class interface_cal extends javax.swing.JFrame {
     double memorydisplay;
     boolean isEquelClicked;
     boolean isBtnClicked=false;
+    boolean isNumBtnClicked;
     double temp;
     double memory;
     
@@ -561,14 +564,14 @@ public class interface_cal extends javax.swing.JFrame {
                                     .addComponent(jbCOT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jbTANH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(tfDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(tfDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbMS, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbMR, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -628,7 +631,7 @@ public class interface_cal extends javax.swing.JFrame {
                             .addComponent(jbMOD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbEQL, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbRAD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -641,6 +644,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb7.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked=true;
     }//GEN-LAST:event_jb7ActionPerformed
 
     private void jb8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb8ActionPerformed
@@ -650,24 +654,36 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb8.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
+        
     }//GEN-LAST:event_jb8ActionPerformed
 
     private void jbDIVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDIVActionPerformed
-        if (isBtnClicked == true) {
-            n2 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            n1 = n1 / n2;
-            opr = ("/");
-        } else {
-            n1 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            opr = ("/");
-            isBtnClicked = true;
-        }
+
+     if(isNumBtnClicked==true){
+            tfDisplay.setText(tfDisplay.getText()+"/");
+            isNumBtnClicked = false;
+      }
     }//GEN-LAST:event_jbDIVActionPerformed
 
     private void jbEQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEQLActionPerformed
-        String answer;
+    
+     //   result=Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        
+        ScriptEngineManager mgr = new ScriptEngineManager();
+        String shortName;
+        ScriptEngine engine = mgr.getEngineByName("javascript");
+
+        String foo = tfDisplay.getText();
+
+        try {
+        tfDisplay.setText(engine.eval(foo).toString());
+
+        } catch (ScriptException e) {
+            e.printStackTrace();
+        }
+        
+        /*  String answer;
         isEquelClicked=true;
         n2 = Double.parseDouble(tfDisplay.getText());
         if(opr == "+"){
@@ -706,23 +722,17 @@ public class interface_cal extends javax.swing.JFrame {
             tfDisplay.setText(String.valueOf(result));
             isBtnClicked=false;
             n1=0;
-        }
+        }*/
                
         
     }//GEN-LAST:event_jbEQLActionPerformed
 
     private void jbSUBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSUBActionPerformed
-      if (isBtnClicked == true){ 
-        n2 = Double.parseDouble(tfDisplay.getText());
-        tfDisplay.setText("");
-        n1 = n1 - n2;
-        opr = ("-");
-      }else{
-        n1 = Double.parseDouble(tfDisplay.getText());
-        tfDisplay.setText("");
-        opr=("-");
-        isBtnClicked=true;
-      }
+     
+     if(isNumBtnClicked==true){
+        tfDisplay.setText(tfDisplay.getText()+"-");
+        isNumBtnClicked=false;
+     }
       
     }//GEN-LAST:event_jbSUBActionPerformed
 
@@ -786,6 +796,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb5.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb5ActionPerformed
 
     private void tfDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDisplayActionPerformed
@@ -794,17 +805,14 @@ public class interface_cal extends javax.swing.JFrame {
 
     
     private void jbADDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbADDActionPerformed
-        if(isBtnClicked==true){
-            n2=Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            n1=n1+n2;
-            opr=("+");
-        }else{
-        n1 = Double.parseDouble(tfDisplay.getText());
-        tfDisplay.setText("");
-        opr=("+");
-        isBtnClicked=true;
-        }
+     
+      if(isNumBtnClicked==true){
+        tfDisplay.setText(tfDisplay.getText() + "+");
+          isNumBtnClicked = false;
+      }     
+       
+        
+       
     }//GEN-LAST:event_jbADDActionPerformed
 
     private void jbSQRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSQRActionPerformed
@@ -820,6 +828,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb9.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb9ActionPerformed
 
     private void jb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb4ActionPerformed
@@ -829,6 +838,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb4.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb4ActionPerformed
 
     private void jb6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb6ActionPerformed
@@ -838,6 +848,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb6.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb6ActionPerformed
 
     private void jb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb1ActionPerformed
@@ -847,6 +858,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb1.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb1ActionPerformed
 
     private void jb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb2ActionPerformed
@@ -856,6 +868,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb2.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb2ActionPerformed
 
     private void jb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb3ActionPerformed
@@ -865,6 +878,7 @@ public class interface_cal extends javax.swing.JFrame {
         }
         String n=tfDisplay.getText() + jb3.getText();
         tfDisplay.setText(n);
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb3ActionPerformed
 
     private void jbCOSECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCOSECActionPerformed
@@ -893,7 +907,8 @@ public class interface_cal extends javax.swing.JFrame {
             isEquelClicked = false;
         }
         String n = tfDisplay.getText() + jb0.getText();
-        tfDisplay.setText(n);
+        tfDisplay.setText(n); 
+        isNumBtnClicked = true;
     }//GEN-LAST:event_jb0ActionPerformed
 
     private void jbpointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbpointActionPerformed
@@ -909,17 +924,11 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbPLUSMINUSActionPerformed
 
     private void jbMULActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMULActionPerformed
-        if (isBtnClicked == true) {
-            n2 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            n1 = n1 * n2;
-            opr = ("*");
-        } else {
-            n1 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            opr = ("*");
-            isBtnClicked = true;
-        }
+  
+     if(isNumBtnClicked==true){
+        tfDisplay.setText(tfDisplay.getText()+"*");
+         isNumBtnClicked = false;
+     }
     }//GEN-LAST:event_jbMULActionPerformed
 
     private void jbSECActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSECActionPerformed
@@ -985,17 +994,10 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_tfDisplayKeyTyped
 
     private void jbMODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMODActionPerformed
-        if (isBtnClicked == true) {
-            n2 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            n1 = n1 % n2;
-            opr = ("%");
-        } else {
-            n1 = Double.parseDouble(tfDisplay.getText());
-            tfDisplay.setText("");
-            opr = ("%");
-            isBtnClicked = true;
-        }
+      if(isNumBtnClicked==true){
+       tfDisplay.setText(tfDisplay.getText()+"%");
+         isNumBtnClicked = false;
+     }
     }//GEN-LAST:event_jbMODActionPerformed
 
     private void jbTANHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTANHActionPerformed
@@ -1056,6 +1058,11 @@ public class interface_cal extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+       
+        
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -1140,4 +1147,8 @@ public class interface_cal extends javax.swing.JFrame {
     private javax.swing.JButton jbpoint;
     private javax.swing.JTextField tfDisplay;
     // End of variables declaration//GEN-END:variables
+
+    private String tfDisplay(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
