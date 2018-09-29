@@ -43,6 +43,7 @@ public class interface_cal extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
+        jbRAD = new javax.swing.JButton();
         tfDisplay = new javax.swing.JTextField();
         jbMOD = new javax.swing.JButton();
         jb4 = new javax.swing.JButton();
@@ -88,13 +89,24 @@ public class interface_cal extends javax.swing.JFrame {
         jbMR = new javax.swing.JButton();
         jbMC = new javax.swing.JButton();
         jbDEGREE = new javax.swing.JButton();
-        jbRAD = new javax.swing.JButton();
         jbINV = new javax.swing.JButton();
+        jbLn = new javax.swing.JButton();
+        jbE = new javax.swing.JButton();
+        jbEx = new javax.swing.JButton();
+        jbOpnBracket = new javax.swing.JButton();
+        jbCloseBracket = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         jButton2.setText("jButton2");
+
+        jbRAD.setText("RAD");
+        jbRAD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRADActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -430,17 +442,45 @@ public class interface_cal extends javax.swing.JFrame {
             }
         });
 
-        jbRAD.setText("RAD");
-        jbRAD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRADActionPerformed(evt);
-            }
-        });
-
         jbINV.setText("1/x");
         jbINV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbINVActionPerformed(evt);
+            }
+        });
+
+        jbLn.setText("ln");
+        jbLn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLnActionPerformed(evt);
+            }
+        });
+
+        jbE.setText("e");
+        jbE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEActionPerformed(evt);
+            }
+        });
+
+        jbEx.setText("e^x");
+        jbEx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExActionPerformed(evt);
+            }
+        });
+
+        jbOpnBracket.setText("(");
+        jbOpnBracket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbOpnBracketActionPerformed(evt);
+            }
+        });
+
+        jbCloseBracket.setText(")");
+        jbCloseBracket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCloseBracketActionPerformed(evt);
             }
         });
 
@@ -498,17 +538,23 @@ public class interface_cal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbLn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jbPOW, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbPOW2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jbCBRT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbROUND, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbDEGREE, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jbLOG, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
@@ -538,17 +584,15 @@ public class interface_cal extends javax.swing.JFrame {
                                         .addComponent(jbEQL, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jbMOD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jbDEGREE, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jbRAD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addComponent(jbCloseBracket, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jbOpnBracket, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jbSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
@@ -562,9 +606,18 @@ public class interface_cal extends javax.swing.JFrame {
                                 .addGap(1, 1, 1)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jbCOT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jbTANH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jbTANH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbEx, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(5, 5, 5))
                     .addComponent(tfDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -580,7 +633,8 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbBACKS, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbBINARY, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbHEXADECIMAL, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbOCT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbLn, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -590,7 +644,8 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbPI, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbPOW, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbPOW2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbPOW3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -600,6 +655,7 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbSQR, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbCBRT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbROUND, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbDEGREE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbLOG, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -610,7 +666,8 @@ public class interface_cal extends javax.swing.JFrame {
                     .addComponent(jbINV, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSIN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbEx, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jb0, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -622,7 +679,7 @@ public class interface_cal extends javax.swing.JFrame {
                             .addComponent(jbSINH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbCOSH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbTANH, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbDEGREE, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbOpnBracket, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jbCOSEC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -630,7 +687,7 @@ public class interface_cal extends javax.swing.JFrame {
                             .addComponent(jbSEC, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbMOD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbEQL, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbRAD, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jbCloseBracket, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -659,72 +716,29 @@ public class interface_cal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb8ActionPerformed
 
     private void jbDIVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDIVActionPerformed
-
-     if(isNumBtnClicked==true){
+         if(isNumBtnClicked==true){
             tfDisplay.setText(tfDisplay.getText()+"/");
             isNumBtnClicked = false;
-      }
+            opr="/";
+        }
     }//GEN-LAST:event_jbDIVActionPerformed
 
     private void jbEQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEQLActionPerformed
-    
-     //   result=Double.parseDouble(String.valueOf(tfDisplay.getText()));
-        
-        ScriptEngineManager mgr = new ScriptEngineManager();
-        String shortName;
-        ScriptEngine engine = mgr.getEngineByName("javascript");
+   
+      
+            ScriptEngineManager mgr = new ScriptEngineManager();
+            String shortName;
+            ScriptEngine engine = mgr.getEngineByName("javascript");
 
-        String foo = tfDisplay.getText();
+            String foo = tfDisplay.getText();
 
-        try {
-        tfDisplay.setText(engine.eval(foo).toString());
-
-        } catch (ScriptException e) {
-            e.printStackTrace();
-        }
-        
-        /*  String answer;
-        isEquelClicked=true;
-        n2 = Double.parseDouble(tfDisplay.getText());
-        if(opr == "+"){
-            
-            result=n1+n2;
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-        }
-        else if(opr=="-"){
-            result=n1-n2;
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-            
-        }else if(opr=="*"){
-            result=n1*n2;
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-
-        }else if(opr=="/"){
-            result=n1/n2;
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-
-        }else if(opr=="%"){
-            result=n1%n2;
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-
-        }else if(opr=="x^y"){
-            result=Math.pow(n1, n2);
-            tfDisplay.setText(String.valueOf(result));
-            isBtnClicked=false;
-            n1=0;
-        }*/
+            try {
+                tfDisplay.setText(engine.eval(foo).toString());
+            } catch (ScriptException e) {
+                e.printStackTrace();
+            }
+       
                
-        
     }//GEN-LAST:event_jbEQLActionPerformed
 
     private void jbSUBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSUBActionPerformed
@@ -732,12 +746,13 @@ public class interface_cal extends javax.swing.JFrame {
      if(isNumBtnClicked==true){
         tfDisplay.setText(tfDisplay.getText()+"-");
         isNumBtnClicked=false;
+        opr="-";
      }
       
     }//GEN-LAST:event_jbSUBActionPerformed
 
     private void jbPOWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPOWActionPerformed
-        if (isBtnClicked == true) {
+    /*    if (isBtnClicked == true) {
             n2 = Double.parseDouble(tfDisplay.getText());
             tfDisplay.setText("");
             n1 =Math.pow(n1, n2);
@@ -747,6 +762,12 @@ public class interface_cal extends javax.swing.JFrame {
             tfDisplay.setText("");
             opr = ("x^y");
             isBtnClicked = true;
+        }*/
+    
+        if (isNumBtnClicked == true) {
+            tfDisplay.setText(tfDisplay.getText() + "^");
+            isNumBtnClicked = false;
+            opr = "^";
         }
     }//GEN-LAST:event_jbPOWActionPerformed
 
@@ -785,7 +806,7 @@ public class interface_cal extends javax.swing.JFrame {
 
     private void jbLOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLOGActionPerformed
         double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
-        num = Math.log(num);
+        num = Math.log10(num);
         tfDisplay.setText(String.valueOf(num));
     }//GEN-LAST:event_jbLOGActionPerformed
 
@@ -809,6 +830,7 @@ public class interface_cal extends javax.swing.JFrame {
       if(isNumBtnClicked==true){
         tfDisplay.setText(tfDisplay.getText() + "+");
           isNumBtnClicked = false;
+          opr="+";
       }     
        
         
@@ -928,6 +950,7 @@ public class interface_cal extends javax.swing.JFrame {
      if(isNumBtnClicked==true){
         tfDisplay.setText(tfDisplay.getText()+"*");
          isNumBtnClicked = false;
+         opr="*";
      }
     }//GEN-LAST:event_jbMULActionPerformed
 
@@ -941,7 +964,7 @@ public class interface_cal extends javax.swing.JFrame {
 
     private void jbPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPIActionPerformed
         double num= 3.1415926535897932384626433832795;
-        tfDisplay.setText(String.valueOf(num));
+        tfDisplay.setText(tfDisplay.getText()+String.valueOf(num));
     }//GEN-LAST:event_jbPIActionPerformed
 
     private void jbROUNDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbROUNDActionPerformed
@@ -997,6 +1020,7 @@ public class interface_cal extends javax.swing.JFrame {
       if(isNumBtnClicked==true){
        tfDisplay.setText(tfDisplay.getText()+"%");
          isNumBtnClicked = false;
+         opr="%";
      }
     }//GEN-LAST:event_jbMODActionPerformed
 
@@ -1053,6 +1077,49 @@ public class interface_cal extends javax.swing.JFrame {
     private void jbMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMCActionPerformed
         memory=0;
     }//GEN-LAST:event_jbMCActionPerformed
+
+    private void jbLnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLnActionPerformed
+        
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        result=Math.log(num);
+        tfDisplay.setText(String.valueOf(result));
+      /*  if (isNumBtnClicked ==false) {
+            tfDisplay.setText(tfDisplay.getText() + "ln");
+            isNumBtnClicked = true;
+            opr = "ln";
+        }*/
+    }//GEN-LAST:event_jbLnActionPerformed
+
+    private void jbEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEActionPerformed
+        double num = 2.71828183;
+        tfDisplay.setText(tfDisplay.getText()+String.valueOf(num));
+    }//GEN-LAST:event_jbEActionPerformed
+
+    private void jbExActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExActionPerformed
+        double num = Double.parseDouble(String.valueOf(tfDisplay.getText()));
+        num = Math.pow(2.71828183,num);
+        tfDisplay.setText(String.valueOf(num));
+    }//GEN-LAST:event_jbExActionPerformed
+
+    private void jbOpnBracketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbOpnBracketActionPerformed
+        if (isEquelClicked == true) {
+            tfDisplay.setText("");
+            isEquelClicked = false;
+        }
+        String n = tfDisplay.getText() + jbOpnBracket.getText();
+        tfDisplay.setText(n);
+        isNumBtnClicked = true;
+    }//GEN-LAST:event_jbOpnBracketActionPerformed
+
+    private void jbCloseBracketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCloseBracketActionPerformed
+        if (isEquelClicked == true) {
+            tfDisplay.setText("");
+            isEquelClicked = false;
+        }
+        String n = tfDisplay.getText() + jbCloseBracket.getText();
+        tfDisplay.setText(n);
+        isNumBtnClicked = true;
+    }//GEN-LAST:event_jbCloseBracketActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1118,18 +1185,23 @@ public class interface_cal extends javax.swing.JFrame {
     private javax.swing.JButton jbCOSEC;
     private javax.swing.JButton jbCOSH;
     private javax.swing.JButton jbCOT;
+    private javax.swing.JButton jbCloseBracket;
     private javax.swing.JButton jbDEGREE;
     private javax.swing.JButton jbDIV;
+    private javax.swing.JButton jbE;
     private javax.swing.JButton jbEQL;
+    private javax.swing.JButton jbEx;
     private javax.swing.JButton jbHEXADECIMAL;
     private javax.swing.JButton jbINV;
     private javax.swing.JButton jbLOG;
+    private javax.swing.JButton jbLn;
     private javax.swing.JButton jbMC;
     private javax.swing.JButton jbMOD;
     private javax.swing.JButton jbMR;
     private javax.swing.JButton jbMS;
     private javax.swing.JButton jbMUL;
     private javax.swing.JButton jbOCT;
+    private javax.swing.JButton jbOpnBracket;
     private javax.swing.JButton jbPI;
     private javax.swing.JButton jbPLUSMINUS;
     private javax.swing.JButton jbPOW;

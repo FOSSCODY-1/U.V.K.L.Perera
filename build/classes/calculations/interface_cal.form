@@ -7,6 +7,14 @@
         <Property name="text" type="java.lang.String" value="jButton2"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JButton" name="jbRAD">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RAD"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbRADActionPerformed"/>
+      </Events>
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -94,6 +102,8 @@
                               <Component id="jbHEXADECIMAL" min="-2" pref="60" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jbOCT" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbLn" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jbPOW" min="-2" pref="60" max="-2" attributes="0"/>
@@ -101,11 +111,15 @@
                               <Component id="jbPOW2" min="-2" pref="60" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jbPOW3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbE" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jbCBRT" min="-2" pref="60" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jbROUND" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbDEGREE" min="-2" pref="65" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jbLOG" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
@@ -113,7 +127,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="jb1" min="-2" pref="60" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jb2" min="-2" pref="60" max="-2" attributes="0"/>
@@ -125,7 +139,7 @@
                               <Component id="jbINV" min="-2" pref="60" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jb0" min="-2" pref="60" max="-2" attributes="0"/>
@@ -142,21 +156,20 @@
                                       <Component id="jbMOD" min="-2" pref="60" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jbDEGREE" min="-2" pref="65" max="-2" attributes="0"/>
-                                  <Component id="jbRAD" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Component id="jbCloseBracket" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jbOpnBracket" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
+                              <EmptySpace pref="7" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jbSIN" min="-2" pref="60" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jbCOS" min="-2" pref="60" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jbTAN" min="-2" pref="60" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
@@ -173,14 +186,24 @@
                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jbCOT" min="-2" pref="60" max="-2" attributes="0"/>
-                                  <Component id="jbTANH" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="jbTANH" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jbSIN" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbCOS" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbTAN" min="-2" pref="60" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jbEx" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   </Group>
                   <Component id="tfDisplay" alignment="0" min="-2" pref="524" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -199,6 +222,7 @@
                   <Component id="jbBINARY" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbHEXADECIMAL" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbOCT" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jbLn" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -210,6 +234,7 @@
                   <Component id="jbPOW" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbPOW2" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbPOW3" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jbE" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -220,6 +245,7 @@
                   <Component id="jbSQR" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbCBRT" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbROUND" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jbDEGREE" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbLOG" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
@@ -232,6 +258,7 @@
                   <Component id="jbSIN" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbCOS" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jbTAN" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jbEx" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -244,7 +271,7 @@
                           <Component id="jbSINH" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="jbCOSH" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="jbTANH" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jbDEGREE" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="jbOpnBracket" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -253,7 +280,7 @@
                           <Component id="jbSEC" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="jbMOD" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="jbEQL" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jbRAD" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="jbCloseBracket" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -634,20 +661,52 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbDEGREEActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jbRAD">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="RAD"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbRADActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="jbINV">
       <Properties>
         <Property name="text" type="java.lang.String" value="1/x"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbINVActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbLn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ln"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbE">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="e"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbEx">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="e^x"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbExActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbOpnBracket">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="("/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbOpnBracketActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbCloseBracket">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=")"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCloseBracketActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
